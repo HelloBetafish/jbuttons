@@ -1,0 +1,14 @@
+body{
+  background: url("pexels-photo-37728.jpeg") no-repeat center fixed;
+ /* Allows background image to fit perfectly on Computer screen, Ipad Screen, & Iphone Screen without any white space */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Merriweather', serif;
+}
+
+button {
+  margin: 5px;
+}
+
