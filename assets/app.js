@@ -4,6 +4,7 @@ var total2v= 0;
 var total3s= 0;
 var stopCount= 0;
 
+
 $(document).on("click", "#arc", function() {
   event.preventDefault();
   if (stopCount < 3)
@@ -49,6 +50,15 @@ $(document).on("click", "#solar", function() {
   }
 });
 
+$(document).on("click", ".sideBtn", function() {
+  var side = $(this).val();
+  console.log(side);
+  var sideArray = document.getElementsByClassName("side");
+  for (var i = 0; i < sideArray.length; i++){
+    sideArray[i].innerHTML = " / " + side;
+  }
+});
+
 $(document).on("click", "#reset", function() {
   event.preventDefault();
   stopCount = 0;
@@ -64,6 +74,10 @@ $(document).on("click", "#reset", function() {
   document.getElementById("p4").innerHTML = "";
   document.getElementById("p5").innerHTML = "";
   document.getElementById("p6").innerHTML = "";
+  var sideArray = document.getElementsByClassName("side");
+  for (var i = 0; i < sideArray.length; i++){
+    sideArray[i].innerHTML = "";
+  }
 });
 
 function assignPlayer(a, b) {
